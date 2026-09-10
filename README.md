@@ -61,7 +61,11 @@ Create a DataFrame named `selected_cars` containing only the records for three m
 ### Discussion
 - For this cell, we would select `Datsun 710`, `Lotus Europa`, `Ferrari Dino` using their Model names. Moreover, we would only get the `['Model','mpg','cyl','hp','gear']` of these selected cars
 ```python
-selected_cars = cars.loc[(cars['Model'] == 'Datsun 710') |(cars['Model'] == 'Lotus Europa') |(cars['Model'] == 'Ferrari Dino'),['Model', 'mpg', 'cyl', 'hp', 'gear']]
+selected_cars = cars.loc[
+  (cars['Model'] == 'Datsun 710')|
+  (cars['Model'] == 'Lotus Europa')|
+  (cars['Model'] == 'Ferrari Dino')
+  ,['Model', 'mpg', 'cyl', 'hp', 'gear']  ]
 ```
 - For the next cell, we would display the dataset `selected_cars` in tabular form. After that we would output the shape of this data set
 ```python
