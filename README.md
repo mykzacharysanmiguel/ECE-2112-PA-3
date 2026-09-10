@@ -59,9 +59,9 @@ pontiac = cars.loc[cars['Model']=='Pontiac Firebird',['Model','mpg','hp','wt']]
 ### Objective
 Create a DataFrame named `selected_cars` containing only the records for three models of cars: `Datsun 710`, `Lotus Europa`, `Ferrari Dino`.
 ### Discussion
-- For this cell, we would select `Datsun 710`, `Lotus Europa`, `Ferrari Dino` using their row numbers which is 2, 27, and 29. Moreover, we would only get the `['Model','mpg','cyl','hp','gear']` of these selected cars
+- For this cell, we would select `Datsun 710`, `Lotus Europa`, `Ferrari Dino` using their Model names. Moreover, we would only get the `['Model','mpg','cyl','hp','gear']` of these selected cars
 ```python
-selected_cars = cars.loc[[2,27,29],['Model','mpg','cyl','hp','gear']]
+selected_cars = cars.loc[(cars['Model'] == 'Datsun 710') |(cars['Model'] == 'Lotus Europa') |(cars['Model'] == 'Ferrari Dino'),['Model', 'mpg', 'cyl', 'hp', 'gear']]
 ```
 - For the next cell, we would display the dataset `selected_cars` in tabular form. After that we would output the shape of this data set
 ```python
